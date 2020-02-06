@@ -1,6 +1,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+Install Material-UI:
+
+### `npm install @material-ui/core`
+### `npm install @material-ui/icons`
+
+React Router
+
+### `npm i react-router-dom --save`
 
 In the project directory, you can run:
 
