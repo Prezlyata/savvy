@@ -186,104 +186,97 @@ import { Link } from 'react-router-dom';
 // 	);
 // }
 
-// import React from 'react';
-// import { makeStyles } from '@material-ui/core/styles';
-// import Paper from '@material-ui/core/Paper';
-// import Tabs from '@material-ui/core/Tabs';
-// import Tab from '@material-ui/core/Tab';
-// import { display } from '@material-ui/system';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import { display } from '@material-ui/system';
+import { useHistory } from "react-router-dom";
 
-// // const useStyles = makeStyles((theme)=> {
-// // 	root: {
-// // 		flexGrow: 1,
-// // 	},
-// // 	hide: {
-// // 		maxWidth: 700,
-// // 		display: 'block'
-// // 	}
-// // });
-
-// const useStyles = makeStyles((theme) => ({
+// const useStyles = makeStyles((theme)=> {
 // 	root: {
-// 		flexGrow: 1
+// 		flexGrow: 1,
 // 	},
 // 	hide: {
-// 		// Match [md, ∞[
-// 		//       [960px, ∞[
-// 		[theme.breakpoints.down(750)]: {
-// 			display: 'none'
-// 		}
+// 		maxWidth: 700,
+// 		display: 'block'
 // 	}
-// }));
+// });
 
-// export default function CenteredTabs() {
-// 	const classes = useStyles();
-// 	const [ value, setValue ] = React.useState(0);
+const useStyles = makeStyles((theme) => ({
+	root: {
+		flexGrow: 1
+	},
+	hide: {
+		// Match [md, ∞[
+		//       [960px, ∞[
+		[theme.breakpoints.down(750)]: {
+			display: 'none'
+		}
+	}
+}));
 
-// 	const handleChange = (event, newValue) => {
-// 		setValue(newValue);
-// 	};
 
-// 	const width = 100;
 
-// 	const widthModifier = {
-// 		minWidth: `${width}px`,
-// 		textTransform: 'none'
-// 	};
+export default function CenteredTabs(props) {
+	const classes = useStyles();
+	const [ value, setValue ] = React.useState(+localStorage.getItem('valueTab'));
 
-// 	return (
-// 		<Paper className={classes.root}>
-// 			<Tabs
-// 				className={classes.hide}
-// 				value={value}
-// 				// style={widthModifier}
-// 				// onChange={handleChange}
-// 				indicatorColor="primary"
-// 				textColor="primary"
-// 				centered
-// 			>
-// 				<Tab label="Member" className={classes.title} component={Link} to="/member/" style={widthModifier} />
-// 				<Tab label="Partner" component={Link} to="/partner/" style={widthModifier} />
-// 				<Tab label="CCPA" component={Link} to="/ccpa/" style={widthModifier} />
-// 				<Tab label="Offers" component={Link} to="/offers/" style={widthModifier} />
-// 				<Tab label="Offer Page Content" component={Link} to="/offerPageContent/" style={widthModifier} />
-// 				<Tab label="Full Credit Report" component={Link} to="/report/" style={widthModifier} />
-// 				<Tab label="Option" component={Link} to="/option/" style={widthModifier} />
-// 			</Tabs>
-// 		</Paper>
-// 	);
-// }
-import React from 'react';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import TypoGraphy from '@material-ui/core/Typography';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import { Home, Book, AccountBox } from '@material-ui/icons';
 
-const Navbar = () => {
+		let history = useHistory();
+	  
+		function handleClick() {
+		  history.push("/offers");
+		  setValue(3)
+		}
+	// React.useEffect(() => {
+	// 	// Update the document title using the browser API
+	// 	localStorage.setItem('valueTab', value);
+	// 	console.log(+localStorage.getItem('valueTab'))
+	//   });
+
+
+
+	const handleChange = (event, newValue) => {
+		
+		handleFormSubmit(newValue)
+		console.log(newValue)
+		setValue(+localStorage.getItem('valueTab'));
+		// console.log(props.match.params)
+	};
+	const handleFormSubmit = newValue => {
+		localStorage.setItem('valueTab', newValue);
+	};
+	
+	const width = 100;
+	const widthModifier = {
+		minWidth: `${width}px`,
+		textTransform: 'none'
+	};
 	return (
-		<List component="nav">
-			<ListItem component="div">
-				<ListItemText inset>
-					<TypoGraphy color="inherit" variant="title">
-						Home <Home />
-					</TypoGraphy>
-				</ListItemText>
-
-				<ListItemText inset>
-					<TypoGraphy color="inherit" variant="title">
-						Posts <Book />
-					</TypoGraphy>
-				</ListItemText>
-
-				<ListItemText inset>
-					<TypoGraphy color="inherit" variant="title">
-						Contact <AccountBox />
-					</TypoGraphy>
-				</ListItemText>
-			</ListItem>
-		</List>
+		
+		<Paper className={classes.root}>
+			    <button type="button" onClick={handleClick}>
+      Go Offer
+    </button>
+			<Tabs
+				className={classes.hide}
+				value={value}
+				// style={widthModifier}
+				onChange={handleChange}
+				indicatorColor="primary"
+				textColor="primary"
+				centered
+			>
+				<Tab label="Member" className={classes.title} component={Link} to="/member/" style={widthModifier} />
+				<Tab label="Partner" component={Link} to="/partner/" style={widthModifier} />
+				<Tab label="CCPA" component={Link} to="/ccpa/" style={widthModifier} />
+				<Tab label="Offers" component={Link} to="/offers/" style={widthModifier} />
+				<Tab label="Offer Page Content" component={Link} to="/offerPageContent/" style={widthModifier} />
+				<Tab label="Full Credit Report" component={Link} to="/report/" style={widthModifier} />
+				<Tab label="Option" component={Link} to="/option/" style={widthModifier} />
+			</Tabs>
+		</Paper>
 	);
-};
-export default Navbar;
+}
