@@ -3,40 +3,27 @@ a {
 }
 ul li a {
 	font-weight: 500;
-	font-size: 0.875rem;
+	/* font-size: 0.875rem; */
+	font-size: 16px;
 	text-decoration: none;
-	padding: 20px;
+	padding: 20px 0;
 	display: inline-block;
 }
 .active {
-	border-bottom: 2px solid red;
-	color: red;
+	border-bottom: 2px solid #000;
+	color: #000;
 }
-/* li {
-	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-} */
 
-/* ul li {
-	display: inline;
-	list-style-type: none;
-	margin: 0;
-} */
-/* ul.header {
-	display: flex;
-	justify-content: center;
-	background-color: #fff;
-	padding: 0;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-} */
-
-/* .content {
-	background-color: #fff;
-	padding: 20px;
-} */
-/* .content h2 {
-	padding: 0;
-	margin: 0;
-} */
-/* .content li {
-	margin-bottom: 10px;
+/* Ripple effect */
+/* .ripple {
+	background-position: center;
+	transition: background 0.8s;
+}
+.ripple:hover {
+	background: #fff radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+.ripple:active {
+	background-color: #6eb9f7;
+	background-size: 100%;
+	transition: background 0s;
 } */
