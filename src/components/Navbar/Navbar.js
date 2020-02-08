@@ -1,21 +1,24 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 import { NavLink } from 'react-router-dom';
-import { IconButton, List, Drawer, Typography, MenuList, MenuItem } from '@material-ui/core';
-import {
-	MenuIcon,
-	HomeIcon,
-	PermIdentityIcon,
-	PeopleOutlineIcon,
-	DetailsIcon,
-	DeveloperBoardIcon,
-	MultilineChartIcon,
-	RemoveFromQueueIcon,
-	LibraryBooksIcon
-} from '@material-ui/icons/PermIdentity';
 import './Navbar.css';
 import styles from './styles';
+
+import Drawer from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
+import { Typography, MenuList, MenuItem } from '@material-ui/core';
+import HomeIcon from '@material-ui/icons/Home';
+
+import PermIdentityIcon from '@material-ui/icons/PermIdentity';
+import PeopleOutlineIcon from '@material-ui/icons/PeopleOutline';
+import DetailsIcon from '@material-ui/icons/Details';
+import DeveloperBoardIcon from '@material-ui/icons/DeveloperBoard';
+import MultilineChartIcon from '@material-ui/icons/MultilineChart';
+import RemoveFromQueueIcon from '@material-ui/icons/RemoveFromQueue';
+import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 
 const Navbar = (props) => {
 	const { classes } = props;
