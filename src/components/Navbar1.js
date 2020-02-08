@@ -192,7 +192,7 @@ import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import { display } from '@material-ui/system';
-import { useHistory } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 
 // const useStyles = makeStyles((theme)=> {
 // 	root: {
@@ -217,49 +217,42 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-
-
 export default function CenteredTabs(props) {
 	const classes = useStyles();
 	const [ value, setValue ] = React.useState(+localStorage.getItem('valueTab'));
 
+	let history = useHistory();
 
-		let history = useHistory();
-	  
-		function handleClick() {
-		  history.push("/offers");
-		  setValue(3)
-		}
+	function handleClick() {
+		history.push('/offers');
+		setValue(3);
+	}
 	// React.useEffect(() => {
 	// 	// Update the document title using the browser API
 	// 	localStorage.setItem('valueTab', value);
 	// 	console.log(+localStorage.getItem('valueTab'))
 	//   });
 
-
-
 	const handleChange = (event, newValue) => {
-		
-		handleFormSubmit(newValue)
-		console.log(newValue)
+		handleFormSubmit(newValue);
+		console.log(newValue);
 		setValue(+localStorage.getItem('valueTab'));
 		// console.log(props.match.params)
 	};
-	const handleFormSubmit = newValue => {
+	const handleFormSubmit = (newValue) => {
 		localStorage.setItem('valueTab', newValue);
 	};
-	
+
 	const width = 100;
 	const widthModifier = {
 		minWidth: `${width}px`,
 		textTransform: 'none'
 	};
 	return (
-		
 		<Paper className={classes.root}>
-			    <button type="button" onClick={handleClick}>
-      Go Offer
-    </button>
+			<button type="button" onClick={handleClick}>
+				Go Offer
+			</button>
 			<Tabs
 				className={classes.hide}
 				value={value}
@@ -269,13 +262,13 @@ export default function CenteredTabs(props) {
 				textColor="primary"
 				centered
 			>
-				<Tab label="Member" className={classes.title} component={Link} to="/member/" style={widthModifier} />
-				<Tab label="Partner" component={Link} to="/partner/" style={widthModifier} />
-				<Tab label="CCPA" component={Link} to="/ccpa/" style={widthModifier} />
-				<Tab label="Offers" component={Link} to="/offers/" style={widthModifier} />
-				<Tab label="Offer Page Content" component={Link} to="/offerPageContent/" style={widthModifier} />
-				<Tab label="Full Credit Report" component={Link} to="/report/" style={widthModifier} />
-				<Tab label="Option" component={Link} to="/option/" style={widthModifier} />
+				<Tab label="Member" className={classes.title} component={Link} to="/member" style={widthModifier} />
+				<Tab label="Partner" component={Link} to="/partner" style={widthModifier} />
+				<Tab label="CCPA" component={Link} to="/ccpa" style={widthModifier} />
+				<Tab label="Offers" component={Link} to="/offers" style={widthModifier} />
+				<Tab label="Offer Page Content" component={Link} to="/offerPageContent" style={widthModifier} />
+				<Tab label="Full Credit Report" component={Link} to="/report" style={widthModifier} />
+				<Tab label="Option" component={Link} to="/option" style={widthModifier} />
 			</Tabs>
 		</Paper>
 	);

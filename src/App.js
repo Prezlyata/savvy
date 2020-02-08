@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar/Navbar.js';
 import Test from './components/Test';
 
 import Home from './pages/Home';
@@ -19,14 +19,14 @@ const App = () => {
 			<Navbar />
 			<Switch>
 				<Route exact path="/" component={Home} />
-				<Route exact path="/member/" component={Member} />
-				<Route exact path="/partner/" component={Partner} />
-				<Route exact path="/ccpa/" component={Ccpa} />
-				<Route exact path="/offers/" component={Offers} />
-				<Route exact path="/offerPageContent/" component={OfferPageContent} />
-				<Route exact path="/report/" component={Report} />
-				<Route exact path="/option/" component={Option} />
-				<Route exact path="/member/:slug" component={Member} />
+				<Route exact path="/member" component={Member} />
+				<Route exact path="/partner" component={Partner} />
+				<Route exact path="/ccpa" component={Ccpa} />
+				<Route exact path="/offers" component={Offers} />
+				<Route exact path="/offerPageContent" component={OfferPageContent} />
+				<Route exact path="/report" component={Report} />
+				<Route exact path="/option" component={Option} />
+				<Route exact path="/member:slug" component={Member} />
 				<Route component={Error} />
 			</Switch>
 			{/* <Test /> */}
