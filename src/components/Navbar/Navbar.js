@@ -54,7 +54,7 @@ const Navbar = (props) => {
 						<PermIdentityIcon color="primary" />
 						Member
 					</MenuItem>
-					<MenuItem component={Link} to="/partner">
+					<MenuItem component={Link} to="/partners">
 						<PeopleOutlineIcon color="primary" />
 						Partner
 					</MenuItem>
