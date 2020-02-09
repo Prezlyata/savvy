@@ -1,6 +1,7 @@
 export default (theme) => ({
 	title: {
-		lineHeight: 2.6
+		lineHeight: 2.6,
+		color: 'rgba(63, 81, 181)'
 	},
 	desktopMenu: {
 		margin: '0 auto',
@@ -19,14 +20,17 @@ export default (theme) => ({
 		}
 	},
 	nav: {
+		zIndex: 2,
 		// Match [md, ∞[
 		//       [960px, ∞[
 		// display: 'inline',
+		// position: 'fixed',
 		listStyleType: 'none',
+		position: 'fixed',
 		margin: 0,
+		width: '100%',
 
 		backgroundColor: '#fff',
-		padding: 0,
 		boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)',
 
 		'& li': {
@@ -35,9 +39,10 @@ export default (theme) => ({
 			listStyleType: 'none',
 			margin: 0
 		}
-	},
-	root: {
-		flexGrow: 1,
-		textAlign: 'left'
 	}
+	// root: {
+	// 	flexGrow: 1,
+	// 	textAlign: 'left',
+	// 	paddingBottom: 20
+	// }
 });

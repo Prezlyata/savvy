@@ -1,17 +1,20 @@
 a {
 	color: rgba(0, 0, 0, 0.54);
 }
+ul {
+	padding: 0;
+}
 ul li a {
 	font-weight: 500;
 	/* font-size: 0.875rem; */
-	font-size: 16px;
+	font-size: 15px;
 	text-decoration: none;
-	padding: 20px 0;
+	padding: 18px 0;
 	display: inline-block;
 }
 .active {
-	border-bottom: 2px solid #000;
-	color: #000;
+	border-bottom: 2px solid rgba(63, 81, 181);
+	color: rgba(63, 81, 181);
 }
 
 /* Ripple effect */

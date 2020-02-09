@@ -1,11 +1,10 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar.js';
-import Test from './components/Test';
 
 import Home from './pages/Home';
 import Member from './pages/Member';
-import Partner from './pages/Partner';
+import Partners from './components/Partners/Partners';
 import Ccpa from './pages/Ccpa';
 import Offers from './pages/Offers';
 import OfferPageContent from './pages/OfferPageContent';
@@ -20,7 +19,7 @@ const App = () => {
 			<Switch>
 				<Route exact path="/" component={Home} />
 				<Route exact path="/member" component={Member} />
-				<Route exact path="/partner" component={Partner} />
+				<Route exact path="/partners" component={Partners} />
 				<Route exact path="/ccpa" component={Ccpa} />
 				<Route exact path="/offers" component={Offers} />
 				<Route exact path="/offerPageContent" component={OfferPageContent} />

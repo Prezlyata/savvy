@@ -46,36 +46,36 @@ const Navbar = (props) => {
 			<List>
 				<MenuList>
 					<MenuItem component={Link} to="/">
-						<HomeIcon />
+						<HomeIcon color="primary" />
 						Home
 					</MenuItem>
 					{/* <Divider /> */}
 					<MenuItem component={Link} to="/member">
-						<PermIdentityIcon />
+						<PermIdentityIcon color="primary" />
 						Member
 					</MenuItem>
 					<MenuItem component={Link} to="/partner">
-						<PeopleOutlineIcon />
+						<PeopleOutlineIcon color="primary" />
 						Partner
 					</MenuItem>
 					<MenuItem component={Link} to="/ccpa">
-						<RemoveFromQueueIcon />
+						<RemoveFromQueueIcon color="primary" />
 						CCPA
 					</MenuItem>
 					<MenuItem component={Link} to="/offers">
-						<LibraryBooksIcon />
+						<LibraryBooksIcon color="primary" />
 						Offers
 					</MenuItem>
 					<MenuItem component={Link} to="/offerPageContent">
-						<DeveloperBoardIcon />
+						<DeveloperBoardIcon color="primary" />
 						Offer Page Content
 					</MenuItem>
 					<MenuItem component={Link} to="/report">
-						<MultilineChartIcon />
+						<MultilineChartIcon color="primary" />
 						Full Credit Report
 					</MenuItem>
 					<MenuItem component={Link} to="/option">
-						<DetailsIcon />
+						<DetailsIcon color="primary" />
 						Option
 					</MenuItem>
 				</MenuList>
@@ -84,7 +84,7 @@ const Navbar = (props) => {
 	);
 	return (
 		<div>
-			<h1 className={classes.root}>React App</h1>
+			{/* <h1 className={classes.root}>React App</h1> */}
 
 			<ul className={classes.nav}>
 				<div className={classes.mobileMenu}>
@@ -110,8 +110,8 @@ const Navbar = (props) => {
 						</NavLink>
 					</li>
 					<li>
-						<NavLink exact to="/partner" className="ripple">
-							Partner
+						<NavLink exact to="/partners" className="ripple">
+							Partners
 						</NavLink>
 					</li>
 					<li>
