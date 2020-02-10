@@ -23,7 +23,7 @@ export default (theme) => ({
 		paddingBottom: 10
 	},
 	table: {
-		minWidth: 400
+		minWidth: 435
 	},
 	imgContainer:{
 		display: 'block',

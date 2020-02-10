@@ -84,7 +84,7 @@ class Partners extends Component {
 						<Table className={classes.table} aria-label="simple table">
 							<TableHead>
 								<TableRow>
-									<TableCell>#</TableCell>
+									<TableCell className={classes.tableMobile}>#</TableCell>
 									<TableCell align="left">PID</TableCell>
 									<TableCell align="left">Name</TableCell>
 									<TableCell align="left" className={classes.tableMobile}>Flags</TableCell>
@@ -95,7 +95,7 @@ class Partners extends Component {
 							<TableBody>
 								{data.map((partner) => (
 									<TableRow key={partner.id}>
-										<TableCell component="th" scope="row">
+										<TableCell component="th" scope="row" className={classes.tableMobile}>
 											{partner.id}
 										</TableCell>
 										<TableCell align="left">{partner.pid}</TableCell>
