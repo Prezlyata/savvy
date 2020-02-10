@@ -123,6 +123,7 @@ class Partners extends Component {
 										{partner.flag}</TableCell>
 										<TableCell align="right" className={classes.tableMobile}>{partner.sso}</TableCell>
 										<TableCell align="left">
+											<div className={classes.editActionMobile}>
 											{' '}
 											<Tooltip title="Edit" aria-label="edit">
 												<IconButton color="primary" size="small">
@@ -139,6 +140,7 @@ class Partners extends Component {
 													<LibraryBooksIcon />
 												</IconButton>
 											</Tooltip>
+											</div>
 										</TableCell>
 									</TableRow>
 								))}

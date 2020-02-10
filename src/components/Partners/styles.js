@@ -23,7 +23,7 @@ export default (theme) => ({
 		paddingBottom: 10
 	},
 	table: {
-		minWidth: 435
+		minWidth: 320
 	},
 	imgContainer:{
 		display: 'block',
@@ -53,6 +53,12 @@ export default (theme) => ({
 	tableMobile:{
 		[theme.breakpoints.down(890)]: {
 			display: 'none'
+		},
+	},
+	editActionMobile:{
+		[theme.breakpoints.down(440)]: {
+			display: 'flex',
+			flexDirection: 'column'
 		},
 	}
 });
