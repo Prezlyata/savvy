@@ -24,5 +24,35 @@ export default (theme) => ({
 	},
 	table: {
 		minWidth: 400
+	},
+	imgContainer:{
+		display: 'block',
+		backgroundSize: 'cover',
+		backgroundRepeat: 'no-repeat',
+		// boxSizing: 'borderBox',
+		overflow: 'hidden',
+		// backgroundPosition: 'center',
+		maxWidth: 180,
+		height: 65
+	},
+	img:{
+		height: 65
+	},
+	partnerContainer:{
+		display: 'flex',
+		flexDirection: 'column'
+	},
+	flagContainer:{
+		display: 'flex',
+		flexDirection: 'column'
+	},
+	flagContent:{
+		display: 'flex',
+		alignItems: 'center',
+	},
+	tableMobile:{
+		[theme.breakpoints.down(890)]: {
+			display: 'none'
+		},
 	}
 });

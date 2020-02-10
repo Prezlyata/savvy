@@ -21,39 +21,39 @@ import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import Tooltip from '@material-ui/core/Tooltip';
 
+import CheckIcon from '@material-ui/icons/Check';
+import RemoveIcon from '@material-ui/icons/Remove';
+
 class Partners extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {};
+		this.state = {
+			data:[
+			{id:1, pid:159234, name:'Frozen yoghurt',img:'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',url:'https://www.google.com/', flag: 6.0, sso: 'WIDGET_SSO'},
+			{id:2, pid:159234, name:'Frozen yoghurt',img:'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',url:'https://www.google.com/', flag: 6.0, sso: 'WIDGET_SSO'},
+			{id:3, pid:159234, name:'Frozen yoghurt',img:'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',url:'https://www.google.com/', flag: 6.0, sso: 'WIDGET_SSO'},
+			{id:4, pid:159234, name:'Frozen yoghurt',img:'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',url:'https://www.google.com/', flag: 6.0, sso: 'WIDGET_SSO'},
+			{id:5, pid:159234, name:'Frozen yoghurt',img:'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',url:'https://www.google.com/', flag: 6.0, sso: 'WIDGET_SSO'},
+			{id:6, pid:159234, name:'Frozen yoghurt',img:'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',url:'https://www.google.com/', flag: 6.0, sso: 'WIDGET_SSO'},
+			{id:7, pid:159234, name:'Frozen yoghurt',img:'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',url:'https://www.google.com/', flag: 6.0, sso: 'WIDGET_SSO'},
+			{id:8, pid:159234, name:'Frozen yoghurt',img:'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',url:'https://www.google.com/', flag: 6.0, sso: 'WIDGET_SSO'},
+			{id:9, pid:159234, name:'Frozen yoghurt',img:'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',url:'https://www.google.com/', flag: 6.0, sso: 'WIDGET_SSO'},
+			{id:10, pid:159234, name:'Frozen yoghurt',img:'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',url:'https://www.google.com/', flag: 6.0, sso: 'WIDGET_SSO'},
+			{id:11, pid:159234, name:'Frozen yoghurt',img:'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',url:'https://www.google.com/', flag: 6.0, sso: 'WIDGET_SSO'},
+			{id:12, pid:159234, name:'Frozen yoghurt',img:'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',url:'https://www.google.com/', flag: 6.0, sso: 'WIDGET_SSO'},
+			{id:13, pid:159234, name:'Frozen yoghurt',img:'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',url:'https://www.google.com/', flag: 6.0, sso: 'WIDGET_SSO'},
+			{id:14, pid:159234, name:'Frozen yoghurt',img:'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',url:'https://www.google.com/', flag: 6.0, sso: 'WIDGET_SSO'},
+			{id:15, pid:159234, name:'Frozen yoghurt',img:'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',url:'https://www.google.com/', flag: 6.0, sso: 'WIDGET_SSO'},
+			{id:16, pid:159234, name:'Frozen yoghurt',img:'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',url:'https://www.google.com/', flag: 6.0, sso: 'WIDGET_SSO'},
+			{id:17, pid:159234, name:'Frozen yoghurt',img:'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',url:'https://www.google.com/', flag: 6.0, sso: 'WIDGET_SSO'}]
+		};
 	}
 
 	componentDidMount() {}
 
 	render() {
 		const { classes } = this.props;
-		const createData = (name, calories, fat, carbs, protein) => {
-			return { name, calories, fat, carbs, protein };
-		};
-
-		const rows = [
-			createData(1, 159234, 'Frozen yoghurt', 6.0, 24),
-			createData(2, 237234, 'Ice cream sandwich', 9.0, 37),
-			createData(3, 262234, 'Eclair', 16.0, 24),
-			createData(4, 305234, 'Cupcake', 3.7, 67),
-			createData(5, 356234, 'Gingerbread', 16.0, 49),
-			createData(2, 237234, 'Ice cream sandwich', 9.0, 37),
-			createData(3, 262234, 'Eclair', 16.0, 24),
-			createData(4, 305234, 'Cupcake', 3.7, 67),
-			createData(5, 356234, 'Gingerbread', 16.0, 49),
-			createData(2, 237234, 'Ice cream sandwich', 9.0, 37),
-			createData(3, 262234, 'Eclair', 16.0, 24),
-			createData(4, 305234, 'Cupcake', 3.7, 67),
-			createData(5, 356234, 'Gingerbread', 16.0, 49),
-			createData(2, 237234, 'Ice cream sandwich', 9.0, 37),
-			createData(3, 262234, 'Eclair', 16.0, 24),
-			createData(4, 305234, 'Cupcake', 3.7, 67),
-			createData(5, 356234, 'Gingerbread', 16.0, 49)
-		];
+		const { data} = this.state;
 		return (
 			<React.Fragment>
 				{/* <CssBaseline /> */}
@@ -87,22 +87,42 @@ class Partners extends Component {
 									<TableCell>#</TableCell>
 									<TableCell align="left">PID</TableCell>
 									<TableCell align="left">Name</TableCell>
-									<TableCell align="right">Flags</TableCell>
-									<TableCell align="right">SSO Products</TableCell>
-									<TableCell align="right">Action</TableCell>
+									<TableCell align="left" className={classes.tableMobile}>Flags</TableCell>
+									<TableCell align="left" className={classes.tableMobile}>SSO Products</TableCell>
+									<TableCell align="left">Action</TableCell>
 								</TableRow>
 							</TableHead>
 							<TableBody>
-								{rows.map((row) => (
-									<TableRow key={row.name}>
+								{data.map((partner) => (
+									<TableRow key={partner.id}>
 										<TableCell component="th" scope="row">
-											{row.name}
+											{partner.id}
 										</TableCell>
-										<TableCell align="left">{row.calories}</TableCell>
-										<TableCell align="left">{row.fat}</TableCell>
-										<TableCell align="right">{row.carbs}</TableCell>
-										<TableCell align="right">{row.protein}</TableCell>
-										<TableCell align="right">
+										<TableCell align="left">{partner.pid}</TableCell>
+										<TableCell  align="left">
+											<div className={classes.partnerContainer}>
+												<div className={classes.imgContainer}>
+													<img className={classes.img}  src={partner.img} alt={partner.name}/>
+												</div>
+												{partner.name}
+												<a href={partner.url}>{partner.url}</a>
+											</div>
+										</TableCell>
+										<TableCell align="left" className={classes.tableMobile}>
+											<div className={classes.flagContainer}>
+												<span className={classes.flagContent}><CheckIcon color="primary"/>&nbsp;Partner is active</span>
+												<span className={classes.flagContent}><CheckIcon color="primary"/>&nbsp;Send Welcome Email</span>
+												<span className={classes.flagContent}><CheckIcon color="primary"/>&nbsp;Send Welcome Email SSO</span>
+												<span className={classes.flagContent}><CheckIcon color="primary"/>&nbsp;Log Widget View</span>
+												<span className={classes.flagContent}><RemoveIcon color="secondary"/>&nbsp;Has Joint Accounts</span>
+												<span className={classes.flagContent}><RemoveIcon color="secondary"/>&nbsp;Migration View Enabled</span>
+												<span className={classes.flagContent}><RemoveIcon color="secondary"/>&nbsp;Skip Confirm Identity</span>
+												<span className={classes.flagContent}><RemoveIcon color="secondary"/>&nbsp;Skip Auth</span>
+												<span className={classes.flagContent}><RemoveIcon color="secondary"/>&nbsp;SSO traffic monitoring</span>
+											</div>
+										{partner.flag}</TableCell>
+										<TableCell align="right" className={classes.tableMobile}>{partner.sso}</TableCell>
+										<TableCell align="left">
 											{' '}
 											<Tooltip title="Edit" aria-label="edit">
 												<IconButton color="primary" size="small">
