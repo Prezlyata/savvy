@@ -56,7 +56,7 @@ export default (theme) => ({
 		},
 	},
 	editActionMobile:{
-		[theme.breakpoints.down(440)]: {
+		[theme.breakpoints.down(550)]: {
 			display: 'flex',
 			flexDirection: 'column'
 		},
