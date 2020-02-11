@@ -11,6 +11,7 @@ import OfferPageContent from './pages/OfferPageContent';
 import Report from './pages/Report';
 import Option from './pages/Option';
 import Error from './pages/Error';
+import CreatePartner from './components/CreatePartner/CreatePartner'
 
 const App = () => {
 	return (
@@ -20,6 +21,7 @@ const App = () => {
 				<Route exact path="/" component={Home} />
 				<Route exact path="/member" component={Member} />
 				<Route exact path="/partners" component={Partners} />
+				<Route exact path="/partners/createPartner" component={CreatePartner} />
 				<Route exact path="/ccpa" component={Ccpa} />
 				<Route exact path="/offers" component={Offers} />
 				<Route exact path="/offerPageContent" component={OfferPageContent} />
