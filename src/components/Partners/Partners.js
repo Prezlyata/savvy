@@ -39,7 +39,16 @@ class Partners extends Component {
 					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
 					url: 'https://www.google.com/',
 					flag: 6.0,
-					sso: 'WIDGET_SSO'
+					sso: 'WIDGET_SSO',
+					partnerIsActive: false,
+					sendWelcomeEmail: true,
+					sendWelcomeEmailSSO: true,
+					logWidgetView: true,
+					hasJointAccounts: false,
+					migrationViewEnabled: false,
+					skipConfirmIdentity: true,
+					skipAuth: false,
+					ssoTrafficMonitoring: false
 				},
 				{
 					id: 2,
@@ -48,7 +57,16 @@ class Partners extends Component {
 					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
 					url: 'https://www.google.com/',
 					flag: 6.0,
-					sso: 'WIDGET_SSO'
+					sso: 'WIDGET_SSO',
+					partnerIsActive: true,
+					sendWelcomeEmail: true,
+					sendWelcomeEmailSSO: true,
+					logWidgetView: true,
+					hasJointAccounts: false,
+					migrationViewEnabled: false,
+					skipConfirmIdentity: true,
+					skipAuth: false,
+					ssoTrafficMonitoring: false
 				},
 				{
 					id: 3,
@@ -57,7 +75,16 @@ class Partners extends Component {
 					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
 					url: 'https://www.google.com/',
 					flag: 6.0,
-					sso: 'WIDGET_SSO'
+					sso: 'WIDGET_SSO',
+					partnerIsActive: true,
+					sendWelcomeEmail: true,
+					sendWelcomeEmailSSO: true,
+					logWidgetView: true,
+					hasJointAccounts: false,
+					migrationViewEnabled: false,
+					skipConfirmIdentity: true,
+					skipAuth: false,
+					ssoTrafficMonitoring: false
 				},
 				{
 					id: 4,
@@ -66,7 +93,16 @@ class Partners extends Component {
 					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
 					url: 'https://www.google.com/',
 					flag: 6.0,
-					sso: 'WIDGET_SSO'
+					sso: 'WIDGET_SSO',
+					partnerIsActive: true,
+					sendWelcomeEmail: true,
+					sendWelcomeEmailSSO: true,
+					logWidgetView: true,
+					hasJointAccounts: false,
+					migrationViewEnabled: false,
+					skipConfirmIdentity: true,
+					skipAuth: false,
+					ssoTrafficMonitoring: false
 				},
 				{
 					id: 5,
@@ -75,7 +111,16 @@ class Partners extends Component {
 					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
 					url: 'https://www.google.com/',
 					flag: 6.0,
-					sso: 'WIDGET_SSO'
+					sso: 'WIDGET_SSO',
+					partnerIsActive: true,
+					sendWelcomeEmail: true,
+					sendWelcomeEmailSSO: true,
+					logWidgetView: true,
+					hasJointAccounts: false,
+					migrationViewEnabled: false,
+					skipConfirmIdentity: true,
+					skipAuth: false,
+					ssoTrafficMonitoring: false
 				},
 				{
 					id: 6,
@@ -84,7 +129,16 @@ class Partners extends Component {
 					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
 					url: 'https://www.google.com/',
 					flag: 6.0,
-					sso: 'WIDGET_SSO'
+					sso: 'WIDGET_SSO',
+					partnerIsActive: true,
+					sendWelcomeEmail: true,
+					sendWelcomeEmailSSO: true,
+					logWidgetView: true,
+					hasJointAccounts: false,
+					migrationViewEnabled: false,
+					skipConfirmIdentity: true,
+					skipAuth: false,
+					ssoTrafficMonitoring: false
 				},
 				{
 					id: 7,
@@ -93,7 +147,16 @@ class Partners extends Component {
 					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
 					url: 'https://www.google.com/',
 					flag: 6.0,
-					sso: 'WIDGET_SSO'
+					sso: 'WIDGET_SSO',
+					partnerIsActive: true,
+					sendWelcomeEmail: true,
+					sendWelcomeEmailSSO: true,
+					logWidgetView: true,
+					hasJointAccounts: false,
+					migrationViewEnabled: false,
+					skipConfirmIdentity: true,
+					skipAuth: false,
+					ssoTrafficMonitoring: false
 				},
 				{
 					id: 8,
@@ -102,7 +165,16 @@ class Partners extends Component {
 					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
 					url: 'https://www.google.com/',
 					flag: 6.0,
-					sso: 'WIDGET_SSO'
+					sso: 'WIDGET_SSO',
+					partnerIsActive: true,
+					sendWelcomeEmail: true,
+					sendWelcomeEmailSSO: true,
+					logWidgetView: true,
+					hasJointAccounts: false,
+					migrationViewEnabled: false,
+					skipConfirmIdentity: true,
+					skipAuth: false,
+					ssoTrafficMonitoring: false
 				},
 				{
 					id: 9,
@@ -111,7 +183,16 @@ class Partners extends Component {
 					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
 					url: 'https://www.google.com/',
 					flag: 6.0,
-					sso: 'WIDGET_SSO'
+					sso: 'WIDGET_SSO',
+					partnerIsActive: true,
+					sendWelcomeEmail: true,
+					sendWelcomeEmailSSO: true,
+					logWidgetView: true,
+					hasJointAccounts: false,
+					migrationViewEnabled: false,
+					skipConfirmIdentity: true,
+					skipAuth: false,
+					ssoTrafficMonitoring: false
 				},
 				{
 					id: 10,
@@ -120,7 +201,16 @@ class Partners extends Component {
 					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
 					url: 'https://www.google.com/',
 					flag: 6.0,
-					sso: 'WIDGET_SSO'
+					sso: 'WIDGET_SSO',
+					partnerIsActive: true,
+					sendWelcomeEmail: true,
+					sendWelcomeEmailSSO: true,
+					logWidgetView: true,
+					hasJointAccounts: false,
+					migrationViewEnabled: false,
+					skipConfirmIdentity: true,
+					skipAuth: false,
+					ssoTrafficMonitoring: false
 				},
 				{
 					id: 11,
@@ -129,7 +219,16 @@ class Partners extends Component {
 					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
 					url: 'https://www.google.com/',
 					flag: 6.0,
-					sso: 'WIDGET_SSO'
+					sso: 'WIDGET_SSO',
+					partnerIsActive: true,
+					sendWelcomeEmail: true,
+					sendWelcomeEmailSSO: true,
+					logWidgetView: true,
+					hasJointAccounts: false,
+					migrationViewEnabled: false,
+					skipConfirmIdentity: true,
+					skipAuth: false,
+					ssoTrafficMonitoring: false
 				},
 				{
 					id: 12,
@@ -138,7 +237,16 @@ class Partners extends Component {
 					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
 					url: 'https://www.google.com/',
 					flag: 6.0,
-					sso: 'WIDGET_SSO'
+					sso: 'WIDGET_SSO',
+					partnerIsActive: true,
+					sendWelcomeEmail: true,
+					sendWelcomeEmailSSO: true,
+					logWidgetView: true,
+					hasJointAccounts: false,
+					migrationViewEnabled: false,
+					skipConfirmIdentity: true,
+					skipAuth: false,
+					ssoTrafficMonitoring: false
 				},
 				{
 					id: 13,
@@ -147,7 +255,16 @@ class Partners extends Component {
 					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
 					url: 'https://www.google.com/',
 					flag: 6.0,
-					sso: 'WIDGET_SSO'
+					sso: 'WIDGET_SSO',
+					partnerIsActive: true,
+					sendWelcomeEmail: true,
+					sendWelcomeEmailSSO: true,
+					logWidgetView: true,
+					hasJointAccounts: false,
+					migrationViewEnabled: false,
+					skipConfirmIdentity: true,
+					skipAuth: false,
+					ssoTrafficMonitoring: false
 				},
 				{
 					id: 14,
@@ -156,7 +273,16 @@ class Partners extends Component {
 					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
 					url: 'https://www.google.com/',
 					flag: 6.0,
-					sso: 'WIDGET_SSO'
+					sso: 'WIDGET_SSO',
+					partnerIsActive: true,
+					sendWelcomeEmail: true,
+					sendWelcomeEmailSSO: true,
+					logWidgetView: true,
+					hasJointAccounts: false,
+					migrationViewEnabled: false,
+					skipConfirmIdentity: true,
+					skipAuth: false,
+					ssoTrafficMonitoring: false
 				},
 				{
 					id: 15,
@@ -165,7 +291,16 @@ class Partners extends Component {
 					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
 					url: 'https://www.google.com/',
 					flag: 6.0,
-					sso: 'WIDGET_SSO'
+					sso: 'WIDGET_SSO',
+					partnerIsActive: true,
+					sendWelcomeEmail: true,
+					sendWelcomeEmailSSO: true,
+					logWidgetView: true,
+					hasJointAccounts: false,
+					migrationViewEnabled: false,
+					skipConfirmIdentity: true,
+					skipAuth: false,
+					ssoTrafficMonitoring: false
 				},
 				{
 					id: 16,
@@ -174,7 +309,16 @@ class Partners extends Component {
 					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
 					url: 'https://www.google.com/',
 					flag: 6.0,
-					sso: 'WIDGET_SSO'
+					sso: 'WIDGET_SSO',
+					partnerIsActive: true,
+					sendWelcomeEmail: true,
+					sendWelcomeEmailSSO: true,
+					logWidgetView: true,
+					hasJointAccounts: false,
+					migrationViewEnabled: false,
+					skipConfirmIdentity: true,
+					skipAuth: false,
+					ssoTrafficMonitoring: false
 				},
 				{
 					id: 17,
@@ -183,7 +327,16 @@ class Partners extends Component {
 					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
 					url: 'https://www.google.com/',
 					flag: 6.0,
-					sso: 'WIDGET_SSO'
+					sso: 'WIDGET_SSO',
+					partnerIsActive: true,
+					sendWelcomeEmail: true,
+					sendWelcomeEmailSSO: true,
+					logWidgetView: true,
+					hasJointAccounts: false,
+					migrationViewEnabled: false,
+					skipConfirmIdentity: true,
+					skipAuth: false,
+					ssoTrafficMonitoring: false
 				}
 			]
 		};
@@ -215,7 +368,7 @@ class Partners extends Component {
 								variant="outlined"
 								size="small"
 							/>
-							<Button component={Link} to={'/partners/createPartner'} variant="contained" color="primary">
+							<Button component={Link} to={'/partners/addPartner'} variant="contained" color="primary">
 								Add partner
 							</Button>
 						</div>
@@ -254,33 +407,87 @@ class Partners extends Component {
 										</TableCell>
 										<TableCell align="left" className={classes.tableMobile}>
 											<div className={classes.flagContainer}>
+											{partner.partnerIsActive === false ? (
+												<span className={classes.flagContent}>
+													<RemoveIcon color="secondary" />&nbsp;Partner is active
+												</span>
+											) : (												
 												<span className={classes.flagContent}>
 													<CheckIcon color="primary" />&nbsp;Partner is active
+												</span> )
+											}
+											{partner.sendWelcomeEmail === false ? (
+												<span className={classes.flagContent}>
+													<RemoveIcon color="secondary" />&nbsp;Send Welcome Email
 												</span>
+											) : (												
 												<span className={classes.flagContent}>
 													<CheckIcon color="primary" />&nbsp;Send Welcome Email
+												</span> )
+											}											
+											{partner.sendWelcomeEmailSSO === false ? (
+												<span className={classes.flagContent}>
+													<RemoveIcon color="secondary" />&nbsp;Send Welcome Email SSO
 												</span>
+											) : (												
 												<span className={classes.flagContent}>
 													<CheckIcon color="primary" />&nbsp;Send Welcome Email SSO
+												</span> )
+											}											
+											{partner.logWidgetView === false ? (
+												<span className={classes.flagContent}>
+													<RemoveIcon color="secondary" />&nbsp;Log Widget View
 												</span>
+											) : (												
 												<span className={classes.flagContent}>
 													<CheckIcon color="primary" />&nbsp;Log Widget View
-												</span>
+												</span> )
+											}											
+											{partner.hasJointAccounts === false ? (
 												<span className={classes.flagContent}>
 													<RemoveIcon color="secondary" />&nbsp;Has Joint Accounts
 												</span>
+											) : (												
+												<span className={classes.flagContent}>
+													<CheckIcon color="primary" />&nbsp;Has Joint Accounts
+												</span> )
+											}											
+											{partner.migrationViewEnabled === false ? (
 												<span className={classes.flagContent}>
 													<RemoveIcon color="secondary" />&nbsp;Migration View Enabled
 												</span>
+											) : (												
+												<span className={classes.flagContent}>
+													<CheckIcon color="primary" />&nbsp;Migration View Enabled
+												</span> )
+											}											
+											{partner.skipConfirmIdentity === false ? (
 												<span className={classes.flagContent}>
 													<RemoveIcon color="secondary" />&nbsp;Skip Confirm Identity
 												</span>
+											) : (												
+												<span className={classes.flagContent}>
+													<CheckIcon color="primary" />&nbsp;Skip Confirm Identity
+												</span> )
+											}											
+											{partner.skipAuth === false ? (
 												<span className={classes.flagContent}>
 													<RemoveIcon color="secondary" />&nbsp;Skip Auth
 												</span>
+											) : (												
+												<span className={classes.flagContent}>
+													<CheckIcon color="primary" />&nbsp;Skip Auth
+												</span> )
+											}											
+											{partner.ssoTrafficMonitoring === false ? (
 												<span className={classes.flagContent}>
 													<RemoveIcon color="secondary" />&nbsp;SSO traffic monitoring
 												</span>
+											) : (												
+												<span className={classes.flagContent}>
+													<CheckIcon color="primary" />&nbsp;SSO traffic monitoring
+												</span> )
+											}											
 											</div>
 											{partner.flag}
 										</TableCell>
