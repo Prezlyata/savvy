@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import inputFields from './inputFields'
 import { withStyles } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
 import TextField from '@material-ui/core/TextField';
@@ -24,13 +25,23 @@ class AddPartner extends Component {
 				<Container maxWidth="md" className={classes.wrapper}>
                     <div className={classes.wrapperMenu}>
                 <form className={classes.root} noValidate autoComplete="off">
+                {inputFields.map((field) => (
+                    <TextField 
+                        key={field.id}
+                        label={field.label}
+                        type={field.type}
+                        variant={field.variant}
+                        size={field.size}
+                        defaultValue={field.defaultValue}
+                        // {field.required}
+                        required={field.required = false}
+                    />
+                ))}
+{/* 
                     <TextField
                         required
                         label="Partner PID"
                         type="number"
-                        // InputLabelProps={{
-                        //     shrink: true,
-                        // }}
                         variant="outlined"
                         size="small"
                     />
@@ -67,7 +78,7 @@ class AddPartner extends Component {
                         variant="outlined"
                         size="small"
                         defaultValue="120"
-                    />
+                    /> */}
                     
                 </form>
                 <Divider className={classes.divider}/>
