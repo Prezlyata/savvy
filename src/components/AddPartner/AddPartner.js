@@ -9,12 +9,34 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 import Divider from '@material-ui/core/Divider';
+import Button from '@material-ui/core/Button';
 import styles from './styles';
 
 class AddPartner extends Component {
 	constructor(props) {
 		super(props);
         this.state = {}
+    }
+
+    handleAddNewPartner = (pid, name, img, url, sso, partnerIsActive, sendWelcomeEmail, sendWelcomeEmailSSO, logWidgetView, hasJointAccounts, migrationViewEnabled, skipConfirmIdentity, skipAuth, ssoTrafficMonitoring) =>{
+        const date = new Date();
+        const newPartner = {
+            id: Date.now(),
+            pid: pid,
+            name: name,
+            img: img,
+            url: url,
+            sso: sso,
+            partnerIsActive: partnerIsActive,
+            sendWelcomeEmail: sendWelcomeEmail,
+            sendWelcomeEmailSSO: sendWelcomeEmailSSO,
+            logWidgetView: logWidgetView,
+            hasJointAccounts: hasJointAccounts,
+            migrationViewEnabled: migrationViewEnabled,
+            skipConfirmIdentity: skipConfirmIdentity,
+            skipAuth: skipAuth,
+            ssoTrafficMonitoring: ssoTrafficMonitoring
+        }
     }
 
     render() {
@@ -128,6 +150,9 @@ class AddPartner extends Component {
                         </FormGroup>
                     </FormControl>
                     </div>
+                    <Button className={classes.btn} variant="contained" color="primary">
+						Add partner
+					</Button>
                 </Container>
             </React.Fragment>
         )

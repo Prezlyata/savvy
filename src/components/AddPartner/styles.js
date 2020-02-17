@@ -22,5 +22,9 @@ export default (theme) => ({
     },
     divider:{
         margin: '20px 0px 30px'
+    },
+    btn: {
+        maxWidth: 320,
+        margin: '20px auto',
     }
 });

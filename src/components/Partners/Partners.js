@@ -489,7 +489,6 @@ class Partners extends Component {
 												</span> )
 											}											
 											</div>
-											{partner.flag}
 										</TableCell>
 										<TableCell align="left" className={classes.tableMobile}>
 											{partner.sso}
