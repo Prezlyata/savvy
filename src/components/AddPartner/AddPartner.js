@@ -15,7 +15,9 @@ import styles from './styles';
 class AddPartner extends Component {
 	constructor(props) {
 		super(props);
-        this.state = {}
+        this.state = {
+            partner: []
+        }
     }
 
     handleAddNewPartner = (pid, name, img, url, sso, partnerIsActive, sendWelcomeEmail, sendWelcomeEmailSSO, logWidgetView, hasJointAccounts, migrationViewEnabled, skipConfirmIdentity, skipAuth, ssoTrafficMonitoring) =>{
@@ -37,6 +39,11 @@ class AddPartner extends Component {
             skipAuth: skipAuth,
             ssoTrafficMonitoring: ssoTrafficMonitoring
         }
+        const newPartnerList = this.state.partner
+        newPartnerList.unshift(newPartner);
+        this.setState({
+			partner: newPartnerList
+		});
     }
 
     render() {
