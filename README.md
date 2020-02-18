@@ -16,6 +16,10 @@ Redux
 ### `npm install --save react-redux`
 ### `npm install redux-thunk`
 
+Redux-form
+
+### `npm install --save redux-form`
+
 In the project directory, you can run:
 
 ### `yarn start`
