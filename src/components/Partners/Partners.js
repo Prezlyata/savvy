@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { compose } from 'redux'
+import { addPartner } from './actions';
 
 import { withStyles } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -31,322 +34,20 @@ class Partners extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			data: [
-				{
-					id: 1,
-					pid: 159234,
-					name: 'Frozen yoghurt',
-					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
-					url: 'https://www.google.com/',
-					flag: 6.0,
-					sso: 'WIDGET_SSO',
-					partnerIsActive: false,
-					sendWelcomeEmail: true,
-					sendWelcomeEmailSSO: true,
-					logWidgetView: true,
-					hasJointAccounts: false,
-					migrationViewEnabled: false,
-					skipConfirmIdentity: true,
-					skipAuth: false,
-					ssoTrafficMonitoring: false
-				},
-				{
-					id: 2,
-					pid: 159234,
-					name: 'Frozen yoghurt',
-					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
-					url: 'https://www.google.com/',
-					flag: 6.0,
-					sso: 'WIDGET_SSO',
-					partnerIsActive: true,
-					sendWelcomeEmail: true,
-					sendWelcomeEmailSSO: true,
-					logWidgetView: true,
-					hasJointAccounts: false,
-					migrationViewEnabled: false,
-					skipConfirmIdentity: true,
-					skipAuth: false,
-					ssoTrafficMonitoring: false
-				},
-				{
-					id: 3,
-					pid: 159234,
-					name: 'Frozen yoghurt',
-					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
-					url: 'https://www.google.com/',
-					flag: 6.0,
-					sso: 'WIDGET_SSO',
-					partnerIsActive: true,
-					sendWelcomeEmail: true,
-					sendWelcomeEmailSSO: true,
-					logWidgetView: true,
-					hasJointAccounts: false,
-					migrationViewEnabled: false,
-					skipConfirmIdentity: true,
-					skipAuth: false,
-					ssoTrafficMonitoring: false
-				},
-				{
-					id: 4,
-					pid: 159234,
-					name: 'Frozen yoghurt',
-					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
-					url: 'https://www.google.com/',
-					flag: 6.0,
-					sso: 'WIDGET_SSO',
-					partnerIsActive: true,
-					sendWelcomeEmail: true,
-					sendWelcomeEmailSSO: true,
-					logWidgetView: true,
-					hasJointAccounts: false,
-					migrationViewEnabled: false,
-					skipConfirmIdentity: true,
-					skipAuth: false,
-					ssoTrafficMonitoring: false
-				},
-				{
-					id: 5,
-					pid: 159234,
-					name: 'Frozen yoghurt',
-					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
-					url: 'https://www.google.com/',
-					flag: 6.0,
-					sso: 'WIDGET_SSO',
-					partnerIsActive: true,
-					sendWelcomeEmail: true,
-					sendWelcomeEmailSSO: true,
-					logWidgetView: true,
-					hasJointAccounts: false,
-					migrationViewEnabled: false,
-					skipConfirmIdentity: true,
-					skipAuth: false,
-					ssoTrafficMonitoring: false
-				},
-				{
-					id: 6,
-					pid: 159234,
-					name: 'Frozen yoghurt',
-					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
-					url: 'https://www.google.com/',
-					flag: 6.0,
-					sso: 'WIDGET_SSO',
-					partnerIsActive: true,
-					sendWelcomeEmail: true,
-					sendWelcomeEmailSSO: true,
-					logWidgetView: true,
-					hasJointAccounts: false,
-					migrationViewEnabled: false,
-					skipConfirmIdentity: true,
-					skipAuth: false,
-					ssoTrafficMonitoring: false
-				},
-				{
-					id: 7,
-					pid: 159234,
-					name: 'Frozen yoghurt',
-					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
-					url: 'https://www.google.com/',
-					flag: 6.0,
-					sso: 'WIDGET_SSO',
-					partnerIsActive: true,
-					sendWelcomeEmail: true,
-					sendWelcomeEmailSSO: true,
-					logWidgetView: true,
-					hasJointAccounts: false,
-					migrationViewEnabled: false,
-					skipConfirmIdentity: true,
-					skipAuth: false,
-					ssoTrafficMonitoring: false
-				},
-				{
-					id: 8,
-					pid: 159234,
-					name: 'Frozen yoghurt',
-					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
-					url: 'https://www.google.com/',
-					flag: 6.0,
-					sso: 'WIDGET_SSO',
-					partnerIsActive: true,
-					sendWelcomeEmail: true,
-					sendWelcomeEmailSSO: true,
-					logWidgetView: true,
-					hasJointAccounts: false,
-					migrationViewEnabled: false,
-					skipConfirmIdentity: true,
-					skipAuth: false,
-					ssoTrafficMonitoring: false
-				},
-				{
-					id: 9,
-					pid: 159234,
-					name: 'Frozen yoghurt',
-					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
-					url: 'https://www.google.com/',
-					flag: 6.0,
-					sso: 'WIDGET_SSO',
-					partnerIsActive: true,
-					sendWelcomeEmail: true,
-					sendWelcomeEmailSSO: true,
-					logWidgetView: true,
-					hasJointAccounts: false,
-					migrationViewEnabled: false,
-					skipConfirmIdentity: true,
-					skipAuth: false,
-					ssoTrafficMonitoring: false
-				},
-				{
-					id: 10,
-					pid: 159234,
-					name: 'Frozen yoghurt',
-					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
-					url: 'https://www.google.com/',
-					flag: 6.0,
-					sso: 'WIDGET_SSO',
-					partnerIsActive: true,
-					sendWelcomeEmail: true,
-					sendWelcomeEmailSSO: true,
-					logWidgetView: true,
-					hasJointAccounts: false,
-					migrationViewEnabled: false,
-					skipConfirmIdentity: true,
-					skipAuth: false,
-					ssoTrafficMonitoring: false
-				},
-				{
-					id: 11,
-					pid: 159234,
-					name: 'Frozen yoghurt',
-					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
-					url: 'https://www.google.com/',
-					flag: 6.0,
-					sso: 'WIDGET_SSO',
-					partnerIsActive: true,
-					sendWelcomeEmail: true,
-					sendWelcomeEmailSSO: true,
-					logWidgetView: true,
-					hasJointAccounts: false,
-					migrationViewEnabled: false,
-					skipConfirmIdentity: true,
-					skipAuth: false,
-					ssoTrafficMonitoring: false
-				},
-				{
-					id: 12,
-					pid: 159234,
-					name: 'Frozen yoghurt',
-					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
-					url: 'https://www.google.com/',
-					flag: 6.0,
-					sso: 'WIDGET_SSO',
-					partnerIsActive: true,
-					sendWelcomeEmail: true,
-					sendWelcomeEmailSSO: true,
-					logWidgetView: true,
-					hasJointAccounts: false,
-					migrationViewEnabled: false,
-					skipConfirmIdentity: true,
-					skipAuth: false,
-					ssoTrafficMonitoring: false
-				},
-				{
-					id: 13,
-					pid: 159234,
-					name: 'Frozen yoghurt',
-					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
-					url: 'https://www.google.com/',
-					flag: 6.0,
-					sso: 'WIDGET_SSO',
-					partnerIsActive: true,
-					sendWelcomeEmail: true,
-					sendWelcomeEmailSSO: true,
-					logWidgetView: true,
-					hasJointAccounts: false,
-					migrationViewEnabled: false,
-					skipConfirmIdentity: true,
-					skipAuth: false,
-					ssoTrafficMonitoring: false
-				},
-				{
-					id: 14,
-					pid: 159234,
-					name: 'Frozen yoghurt',
-					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
-					url: 'https://www.google.com/',
-					flag: 6.0,
-					sso: 'WIDGET_SSO',
-					partnerIsActive: true,
-					sendWelcomeEmail: true,
-					sendWelcomeEmailSSO: true,
-					logWidgetView: true,
-					hasJointAccounts: false,
-					migrationViewEnabled: false,
-					skipConfirmIdentity: true,
-					skipAuth: false,
-					ssoTrafficMonitoring: false
-				},
-				{
-					id: 15,
-					pid: 159234,
-					name: 'Frozen yoghurt',
-					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
-					url: 'https://www.google.com/',
-					flag: 6.0,
-					sso: 'WIDGET_SSO',
-					partnerIsActive: true,
-					sendWelcomeEmail: true,
-					sendWelcomeEmailSSO: true,
-					logWidgetView: true,
-					hasJointAccounts: false,
-					migrationViewEnabled: false,
-					skipConfirmIdentity: true,
-					skipAuth: false,
-					ssoTrafficMonitoring: false
-				},
-				{
-					id: 16,
-					pid: 159234,
-					name: 'Frozen yoghurt',
-					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
-					url: 'https://www.google.com/',
-					flag: 6.0,
-					sso: 'WIDGET_SSO',
-					partnerIsActive: true,
-					sendWelcomeEmail: true,
-					sendWelcomeEmailSSO: true,
-					logWidgetView: true,
-					hasJointAccounts: false,
-					migrationViewEnabled: false,
-					skipConfirmIdentity: true,
-					skipAuth: false,
-					ssoTrafficMonitoring: false
-				},
-				{
-					id: 17,
-					pid: 159234,
-					name: 'Frozen yoghurt',
-					img: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
-					url: 'https://www.google.com/',
-					flag: 6.0,
-					sso: 'WIDGET_SSO',
-					partnerIsActive: true,
-					sendWelcomeEmail: true,
-					sendWelcomeEmailSSO: true,
-					logWidgetView: true,
-					hasJointAccounts: false,
-					migrationViewEnabled: false,
-					skipConfirmIdentity: true,
-					skipAuth: false,
-					ssoTrafficMonitoring: false
-				}
-			]
+			data: []
 		};
 	}
 
-	componentDidMount() {}
+	// componentDidMount() {
+	// 	const data = this.props.data
+	// 	this.setState({
+	// 		data: data
+	// 	})
+	// 	// this.props.loadPartners();
+	// }
 
 	render() {
 		const { classes } = this.props;
-		const { data } = this.state;
 		return (
 			<React.Fragment>
 				{/* <CssBaseline /> */}
@@ -390,7 +91,7 @@ class Partners extends Component {
 								</TableRow>
 							</TableHead>
 							<TableBody>
-								{data.map((partner) => (
+								{this.props.partnersList.map((partner) => (
 									<TableRow key={partner.id}>
 										<TableCell component="th" scope="row" className={classes.tableMobile}>
 											{partner.id}
@@ -524,4 +225,17 @@ class Partners extends Component {
 	}
 }
 
-export default withStyles(styles)(Partners);
+const mapDispatchToProps = (dispatch) => {
+	return {
+        addPartner: () => dispatch(addPartner()),
+	};
+};
+
+const mapStateToProps = (state) => {
+	return {
+		partnersList: state.partnersReducer.partnersList
+	};
+};
+
+// export default connect(mapStateToProps, mapDispatchToProps); withStyles(styles)(Partners);
+export default compose(connect(mapStateToProps, mapDispatchToProps), withStyles(styles))(Partners);

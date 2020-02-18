@@ -10,6 +10,12 @@ React Router
 
 ### `npm i react-router-dom --save`
 
+Redux
+
+### `npm install --save redux`
+### `npm install --save react-redux`
+### `npm install redux-thunk`
+
 In the project directory, you can run:
 
 ### `yarn start`

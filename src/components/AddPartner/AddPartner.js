@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {inputFields, partnerStatus, emailRules, loginRules, memberProfileRules, products, ssoRules} from './inputFields'
+import {inputFields, partnerStatus, emailRules, loginRules, memberProfileRules, products, ssoRules} from './configFields'
 import { withStyles } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
 import TextField from '@material-ui/core/TextField';
