@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {inputFields, partnerStatus, emailRules, loginRules, memberProfileRules, products, ssoRules} from './configFields'
+import {reduxForm, Field} from 'redux-form';
+import { compose } from 'redux'
 import { withStyles } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
 import TextField from '@material-ui/core/TextField';
@@ -11,6 +13,26 @@ import FormLabel from '@material-ui/core/FormLabel';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import styles from './styles';
+
+import ContactForm from './ContactForm'
+
+
+const FIELDS = {
+    partnerPID:{
+        type: 'input',
+        lable: 'Title for Post'
+    },
+    platform:{
+        type: 'input',
+        lable: 'Enter platform'
+    },
+    partnerName:{
+        type: 'input',
+        lable: 'Enter partner name' 
+    }
+};
+
+// ['partnerPID', 'platform', 'partnerName', 'loginUrl', 'webSite', 'FIID', 'dormancyPeriod']
 
 class AddPartner extends Component {
 	constructor(props) {
@@ -44,6 +66,10 @@ class AddPartner extends Component {
         this.setState({
 			partner: newPartnerList
 		});
+    }
+
+    submit = values =>{
+        console.log(values)
     }
 
     render() {
@@ -160,10 +186,43 @@ class AddPartner extends Component {
                     <Button className={classes.btn} variant="contained" color="primary">
 						Add partner
 					</Button>
+
                 </Container>
+                {/* <form onSubmit={this.handleSubmit()}>
+                        <div>
+                            <label htmlFor="firstName">First Name</label>
+                            <Field name="firstName" component="input" type="text" />
+                        </div>
+                        <div>
+                            <label htmlFor="lastName">Last Name</label>
+                            <Field name="lastName" component="input" type="text" />
+                        </div>
+                        <div>
+                            <label htmlFor="email">Email</label>
+                            <Field name="email" component="input" type="email" />
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form> */}
+
+                    <ContactForm onSubmit={this.submit}/>
             </React.Fragment>
         )
     }
 }
 
+// export default withStyles(styles)(AddPartner);
+
+// export default reduxForm ({
+//     from: 'my-customer-registration-form',
+//     onSubmit,
+// }) (ReduxForm); 
+
+
+// AddPartner = reduxForm({
+//     from: 'partner'
+// })(AddPartner)
 export default withStyles(styles)(AddPartner);
+
+// export default compose(reduxForm ({
+//     from: 'partner',
+// }), withStyles(styles)(AddPartner))
