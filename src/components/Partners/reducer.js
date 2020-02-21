@@ -312,7 +312,6 @@ let initialState = {
 };
 
 const partnersReducer = (state = initialState, action) => {
-    console.log(state)
 	switch (action.type) {
 		case 'ADDPARTNER':
 			return {
