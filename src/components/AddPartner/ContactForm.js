@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 import { requiredField, maxLengthCreator } from '../../utils/validators';
-import { Textarea } from '../common/FormsControls/FormsControls';
+// import { Textarea } from '../common/FormsControls/FormsControls';
 
 const maxLength10 = maxLengthCreator(10);
 const ContactForm = (props) => {
@@ -73,8 +73,8 @@ const ContactForm = (props) => {
 		// 		</button>
 		// 	</div>
 		// </form>
-		<form onSubmit={props.handleSubmit}>
-			<div>
+		<form onSubmit={props.handleSubmit} >
+			{/* <div>
 				<label htmlFor="firstName">First Name</label>
 				<Field
 					name="firstName"
@@ -92,7 +92,7 @@ const ContactForm = (props) => {
 				<label htmlFor="email">Email</label>
 				<Field name="email" component="input" type="email" />
 			</div>
-			<button type="submit">Submit</button>
+			<button type="submit">Submit</button> */}
 		</form>
 	);
 };
