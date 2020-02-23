@@ -2,7 +2,6 @@ export default (theme) => ({
 	root: {
 		display: 'flex',
 		flexDirection: 'column',
-		// alignItems: 'center',
 		'& .MuiTextField-root': {
 			margin: theme.spacing(1),
 			minWidth: 220

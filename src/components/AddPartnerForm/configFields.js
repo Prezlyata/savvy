@@ -1,16 +1,15 @@
 export const inputFields = [
 	{
 		label: 'Partner PID',
-		name: 'Partner PID',
+		name: 'pid',
 		type: 'number',
 		variant: 'outlined',
-		required: 'required',
 		size: 'small',
 		defaultValue: null
 	},
 	{
 		label: 'Platform',
-		name: 'Platform',
+		name: 'platform',
 		type: 'text',
 		variant: 'outlined',
 		size: 'small',
@@ -18,28 +17,25 @@ export const inputFields = [
 	},
 	{
 		label: 'Partner name',
-		name: 'Partner name',
+		name: 'name',
 		type: 'text',
 		variant: 'outlined',
-		required: 'required',
 		size: 'small',
 		defaultValue: null
 	},
 	{
 		label: 'Login Url',
-		name: 'Login Url',
+		name: 'url',
 		type: 'text',
 		variant: 'outlined',
-		required: null,
 		size: 'small',
 		defaultValue: null
 	},
 	{
 		label: 'WebSite',
-		name: 'WebSite',
+		name: 'webSite',
 		type: 'text',
 		variant: 'outlined',
-		required: null,
 		size: 'small',
 		defaultValue: null
 	},
@@ -48,16 +44,14 @@ export const inputFields = [
 		name: 'FI_ID',
 		type: 'text',
 		variant: 'outlined',
-		required: null,
 		size: 'small',
 		defaultValue: null
 	},
 	{
 		label: 'Dormancy period',
-		name: 'DormancyPeriod',
+		name: 'dormancyPeriod',
 		type: 'number',
 		variant: 'outlined',
-		required: 'required',
 		size: 'small',
 		defaultValue: '120'
 	}
@@ -65,7 +59,7 @@ export const inputFields = [
 
 export const partnerStatus = [
 	{
-		name: 'Active',
+		name: 'active',
 		label: 'Active',
 		value: 'end',
 		color: 'primary',
@@ -75,14 +69,14 @@ export const partnerStatus = [
 
 export const emailRules = [
 	{
-		name: 'Send Welcome Emails',
+		name: 'sendWelcomeEmail',
 		label: 'Send Welcome Emails',
 		value: 'end',
 		color: 'primary',
 		labelPlacement: 'end'
 	},
 	{
-		name: 'Send Welcome Emails at SSO',
+		name: 'sendWelcomeEmailSSO',
 		label: 'Send Welcome Emails at SSO',
 		value: 'end',
 		color: 'primary',
@@ -96,7 +90,7 @@ export const emailRules = [
 		labelPlacement: 'end'
 	},
 	{
-		name: 'Send inactive emails',
+		name: 'sendInactiveEmails',
 		label: 'Send inactive emails',
 		value: 'end',
 		color: 'primary',
@@ -113,14 +107,14 @@ export const loginRules = [
 		labelPlacement: 'end'
 	},
 	{
-		name: 'Reset activity on api login',
+		name: 'resetActivityOnApiLogin',
 		label: 'Reset activity on api login',
 		value: 'end',
 		color: 'primary',
 		labelPlacement: 'end'
 	},
 	{
-		name: 'Skip Authentication',
+		name: 'skipAuth',
 		label: 'Skip Authentication',
 		value: 'end',
 		color: 'primary',
@@ -130,7 +124,7 @@ export const loginRules = [
 
 export const memberProfileRules = [
 	{
-		name: 'Member can edit email in profile',
+		name: 'memberCanEditEmailInProfile',
 		label: 'Member can edit email in profile',
 		value: 'end',
 		color: 'primary',
@@ -139,21 +133,21 @@ export const memberProfileRules = [
 ];
 export const products = [
 	{
-		name: 'APPLICATION SSO IFRAME INTEGRATED',
+		name: 'appSSOIframeIntegrated',
 		label: 'APPLICATION SSO IFRAME INTEGRATED',
 		value: 'end',
 		color: 'primary',
 		labelPlacement: 'end'
 	},
 	{
-		name: 'APPLICATION_SSO',
+		name: 'applicationSSO',
 		label: 'APPLICATION_SSO',
 		value: 'end',
 		color: 'primary',
 		labelPlacement: 'end'
 	},
 	{
-		name: 'WIDGET_SSO',
+		name: 'widgetSSO',
 		label: 'WIDGET_SSO',
 		value: 'end',
 		color: 'primary',
@@ -162,49 +156,42 @@ export const products = [
 ];
 export const ssoRules = [
 	{
-		name: 'Enable Migration from non-SSO to SSO',
+		name: 'migrationFromNonSSOtoSSO',
 		label: 'Enable Migration from non-SSO to SSO',
 		value: 'end',
 		color: 'primary',
 		labelPlacement: 'end'
 	},
 	{
-		name: 'Enable PMID Migration',
+		name: 'migrationViewEnabled',
 		label: 'Enable PMID Migration',
 		value: 'end',
 		color: 'primary',
 		labelPlacement: 'end'
 	},
 	{
-		name: "Don't Confirm Identity during navigation from OLB to SM website",
-		label: "Don't Confirm Identity during navigation from OLB to SM website",
+		name: 'skipConfirmIdentity',
+		label: 'Skip Confirm Identity',
 		value: 'end',
 		color: 'primary',
 		labelPlacement: 'end'
 	},
 	{
-		name: "Don't Confirm Identity during navigation from Widget to SM website",
-		label: "Don't Confirm Identity during navigation from Widget to SM website",
+		name: 'hasJointAccounts',
+		label: 'Has Joint Accounts',
 		value: 'end',
 		color: 'primary',
 		labelPlacement: 'end'
 	},
 	{
-		name: 'Allow multiple accounts from single partner member id',
-		label: 'Allow multiple accounts from single partner member id',
-		value: 'end',
-		color: 'primary',
-		labelPlacement: 'end'
-	},
-	{
-		name: 'Allow widget notifications',
+		name: 'AllowWidgetNotifications',
 		label: 'Allow widget notifications',
 		value: 'end',
 		color: 'primary',
 		labelPlacement: 'end'
 	},
 	{
-		name: 'Enable monitoring of incoming sso traffic',
+		name: 'ssoTrafficMonitoring',
 		label: 'Enable monitoring of incoming sso traffic',
 		value: 'end',
 		color: 'primary',

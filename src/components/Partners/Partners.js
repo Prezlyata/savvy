@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { compose } from 'redux'
-import { addPartner } from './actions';
+import { compose } from 'redux';
+import { getPartnersList } from './actions';
 
 import { withStyles } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -38,13 +38,9 @@ class Partners extends Component {
 		};
 	}
 
-	// componentDidMount() {
-	// 	const data = this.props.data
-	// 	this.setState({
-	// 		data: data
-	// 	})
-	// 	// this.props.loadPartners();
-	// }
+	componentDidMount() {
+		this.props.getPartnersList();
+	}
 
 	render() {
 		const { classes } = this.props;
@@ -93,10 +89,10 @@ class Partners extends Component {
 							<TableBody>
 								{this.props.partnersList.map((partner) => (
 									<TableRow key={partner.id}>
-										<TableCell component="th" scope="row" className={classes.tableMobile}>
+										{/* <TableCell component="th" scope="row" className={classes.tableMobile}>
 											{partner.id}
 										</TableCell>
-										<TableCell align="left">{partner.pid}</TableCell>
+										<TableCell align="left">{partner.pid}</TableCell> */}
 										<TableCell align="left">
 											<div className={classes.partnerContainer}>
 												<div className={classes.imgContainer}>
@@ -106,94 +102,94 @@ class Partners extends Component {
 												<a href={partner.url}>{partner.url}</a>
 											</div>
 										</TableCell>
-										<TableCell align="left" className={classes.tableMobile}>
+										{/* <TableCell align="left" className={classes.tableMobile}>
 											<div className={classes.flagContainer}>
-											{partner.partnerIsActive === false ? (
-												<span className={classes.flagContent}>
-													<RemoveIcon color="secondary" />&nbsp;Partner is active
-												</span>
-											) : (												
-												<span className={classes.flagContent}>
-													<CheckIcon color="primary" />&nbsp;Partner is active
-												</span> )
-											}
-											{partner.sendWelcomeEmail === false ? (
-												<span className={classes.flagContent}>
-													<RemoveIcon color="secondary" />&nbsp;Send Welcome Email
-												</span>
-											) : (												
-												<span className={classes.flagContent}>
-													<CheckIcon color="primary" />&nbsp;Send Welcome Email
-												</span> )
-											}											
-											{partner.sendWelcomeEmailSSO === false ? (
-												<span className={classes.flagContent}>
-													<RemoveIcon color="secondary" />&nbsp;Send Welcome Email SSO
-												</span>
-											) : (												
-												<span className={classes.flagContent}>
-													<CheckIcon color="primary" />&nbsp;Send Welcome Email SSO
-												</span> )
-											}											
-											{partner.logWidgetView === false ? (
-												<span className={classes.flagContent}>
-													<RemoveIcon color="secondary" />&nbsp;Log Widget View
-												</span>
-											) : (												
-												<span className={classes.flagContent}>
-													<CheckIcon color="primary" />&nbsp;Log Widget View
-												</span> )
-											}											
-											{partner.hasJointAccounts === false ? (
-												<span className={classes.flagContent}>
-													<RemoveIcon color="secondary" />&nbsp;Has Joint Accounts
-												</span>
-											) : (												
-												<span className={classes.flagContent}>
-													<CheckIcon color="primary" />&nbsp;Has Joint Accounts
-												</span> )
-											}											
-											{partner.migrationViewEnabled === false ? (
-												<span className={classes.flagContent}>
-													<RemoveIcon color="secondary" />&nbsp;Migration View Enabled
-												</span>
-											) : (												
-												<span className={classes.flagContent}>
-													<CheckIcon color="primary" />&nbsp;Migration View Enabled
-												</span> )
-											}											
-											{partner.skipConfirmIdentity === false ? (
-												<span className={classes.flagContent}>
-													<RemoveIcon color="secondary" />&nbsp;Skip Confirm Identity
-												</span>
-											) : (												
-												<span className={classes.flagContent}>
-													<CheckIcon color="primary" />&nbsp;Skip Confirm Identity
-												</span> )
-											}											
-											{partner.skipAuth === false ? (
-												<span className={classes.flagContent}>
-													<RemoveIcon color="secondary" />&nbsp;Skip Auth
-												</span>
-											) : (												
-												<span className={classes.flagContent}>
-													<CheckIcon color="primary" />&nbsp;Skip Auth
-												</span> )
-											}											
-											{partner.ssoTrafficMonitoring === false ? (
-												<span className={classes.flagContent}>
-													<RemoveIcon color="secondary" />&nbsp;SSO traffic monitoring
-												</span>
-											) : (												
-												<span className={classes.flagContent}>
-													<CheckIcon color="primary" />&nbsp;SSO traffic monitoring
-												</span> )
-											}											
+												{partner.partnerIsActive === false ? (
+													<span className={classes.flagContent}>
+														<RemoveIcon color="secondary" />&nbsp;Partner is active
+													</span>
+												) : (
+													<span className={classes.flagContent}>
+														<CheckIcon color="primary" />&nbsp;Partner is active
+													</span>
+												)}
+												{partner.sendWelcomeEmail === false ? (
+													<span className={classes.flagContent}>
+														<RemoveIcon color="secondary" />&nbsp;Send Welcome Email
+													</span>
+												) : (
+													<span className={classes.flagContent}>
+														<CheckIcon color="primary" />&nbsp;Send Welcome Email
+													</span>
+												)}
+												{partner.sendWelcomeEmailSSO === false ? (
+													<span className={classes.flagContent}>
+														<RemoveIcon color="secondary" />&nbsp;Send Welcome Email SSO
+													</span>
+												) : (
+													<span className={classes.flagContent}>
+														<CheckIcon color="primary" />&nbsp;Send Welcome Email SSO
+													</span>
+												)}
+												{partner.logWidgetView === false ? (
+													<span className={classes.flagContent}>
+														<RemoveIcon color="secondary" />&nbsp;Log Widget View
+													</span>
+												) : (
+													<span className={classes.flagContent}>
+														<CheckIcon color="primary" />&nbsp;Log Widget View
+													</span>
+												)}
+												{partner.hasJointAccounts === false ? (
+													<span className={classes.flagContent}>
+														<RemoveIcon color="secondary" />&nbsp;Has Joint Accounts
+													</span>
+												) : (
+													<span className={classes.flagContent}>
+														<CheckIcon color="primary" />&nbsp;Has Joint Accounts
+													</span>
+												)}
+												{partner.migrationViewEnabled === false ? (
+													<span className={classes.flagContent}>
+														<RemoveIcon color="secondary" />&nbsp;Migration View Enabled
+													</span>
+												) : (
+													<span className={classes.flagContent}>
+														<CheckIcon color="primary" />&nbsp;Migration View Enabled
+													</span>
+												)}
+												{partner.skipConfirmIdentity === false ? (
+													<span className={classes.flagContent}>
+														<RemoveIcon color="secondary" />&nbsp;Skip Confirm Identity
+													</span>
+												) : (
+													<span className={classes.flagContent}>
+														<CheckIcon color="primary" />&nbsp;Skip Confirm Identity
+													</span>
+												)}
+												{partner.skipAuth === false ? (
+													<span className={classes.flagContent}>
+														<RemoveIcon color="secondary" />&nbsp;Skip Auth
+													</span>
+												) : (
+													<span className={classes.flagContent}>
+														<CheckIcon color="primary" />&nbsp;Skip Auth
+													</span>
+												)}
+												{partner.ssoTrafficMonitoring === false ? (
+													<span className={classes.flagContent}>
+														<RemoveIcon color="secondary" />&nbsp;SSO traffic monitoring
+													</span>
+												) : (
+													<span className={classes.flagContent}>
+														<CheckIcon color="primary" />&nbsp;SSO traffic monitoring
+													</span>
+												)}
 											</div>
-										</TableCell>
-										<TableCell align="left" className={classes.tableMobile}>
+										</TableCell> */}
+										{/* <TableCell align="left" className={classes.tableMobile}>
 											{partner.sso}
-										</TableCell>
+										</TableCell> */}
 										<TableCell align="left">
 											<div className={classes.editActionMobile}>
 												{' '}
@@ -227,7 +223,7 @@ class Partners extends Component {
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-        addPartner: () => dispatch(addPartner()),
+		getPartnersList: () => dispatch(getPartnersList())
 	};
 };
 

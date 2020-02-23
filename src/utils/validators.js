@@ -12,7 +12,7 @@ export const maxLengthCreator = (maxLength) => (value) => {
 
 export const validate = (values) => {
 	const errors = {};
-	const requiredFields = [ 'Partner PID', 'Partner name' ];
+	const requiredFields = [ 'pid', 'name' ];
 	requiredFields.forEach((field) => {
 		if (!values[field]) {
 			errors[field] = 'Required';
