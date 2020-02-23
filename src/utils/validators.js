@@ -1,14 +1,14 @@
-export const requiredField = (value) => {
-	if (value) return undefined;
+// export const requiredField = (value) => {
+// 	if (value) return undefined;
 
-	return 'Field is required';
-};
+// 	return 'Field is required';
+// };
 
-export const maxLengthCreator = (maxLength) => (value) => {
-	if (value.length > maxLength) return `Max length is ${maxLength} symbols`;
+// export const maxLengthCreator = (maxLength) => (value) => {
+// 	if (value.length > maxLength) return `Max length is ${maxLength} symbols`;
 
-	return undefined;
-};
+// 	return undefined;
+// };
 
 export const validate = (values) => {
 	const errors = {};

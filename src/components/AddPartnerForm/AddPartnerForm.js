@@ -19,8 +19,8 @@ import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import styles from './styles';
 
-const AddPartnerForm = (props) => {
-	const { handleSubmit, pristine, reset, submitting, classes } = props;
+const AddPartnerForm = ({ handleSubmit, pristine, reset, submitting, classes }) => {
+	// const { handleSubmit, pristine, reset, submitting, classes } = props;
 	return (
 		<React.Fragment>
 			<Container maxWidth="md" className={classes.wrapper}>
@@ -121,7 +121,8 @@ const AddPartnerForm = (props) => {
 
 export default compose(
 	reduxForm({
-		form: 'AddPartnerForm', // a unique identifier for this form
+		// a unique identifier for this form
+		form: 'AddPartnerForm1',
 		validate
 		// asyncValidate
 	}),

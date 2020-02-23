@@ -20,6 +20,10 @@ Redux-form
 
 ### `npm install --save redux-form`
 
+React-app-polyfill
+
+### `npm i --save react-app-polyfill`
+
 In the project directory, you can run:
 
 ### `yarn start`
