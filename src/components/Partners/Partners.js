@@ -6,8 +6,6 @@ import { compose } from 'redux';
 import { getPartnersList } from './actions';
 
 import { withStyles } from '@material-ui/core';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
@@ -51,15 +49,9 @@ class Partners extends Component {
 					{/* <Typography component="div" /> */}
 					<form className={classes.root} noValidate autoComplete="off">
 						<div className={classes.input}>
+							<TextField id="pid-search" label="Partner PID" type="PID" variant="outlined" size="small" />
 							<TextField
-								id="outlined-search"
-								label="Partner PID"
-								type="PID"
-								variant="outlined"
-								size="small"
-							/>
-							<TextField
-								id="outlined-search"
+								id="partner-search"
 								label="Partner name"
 								type="name"
 								variant="outlined"
@@ -87,12 +79,12 @@ class Partners extends Component {
 								</TableRow>
 							</TableHead>
 							<TableBody>
-								{this.props.partnersList.map((partner) => (
+								{this.props.partnersList.map((partner, idx) => (
 									<TableRow key={partner.id}>
-										{/* <TableCell component="th" scope="row" className={classes.tableMobile}>
-											{partner.id}
+										<TableCell component="th" scope="row" className={classes.tableMobile}>
+											{idx + 1}
 										</TableCell>
-										<TableCell align="left">{partner.pid}</TableCell> */}
+										<TableCell align="left">{partner.pid}</TableCell>
 										<TableCell align="left">
 											<div className={classes.partnerContainer}>
 												<div className={classes.imgContainer}>
@@ -102,7 +94,7 @@ class Partners extends Component {
 												<a href={partner.url}>{partner.url}</a>
 											</div>
 										</TableCell>
-										{/* <TableCell align="left" className={classes.tableMobile}>
+										<TableCell align="left" className={classes.tableMobile}>
 											<div className={classes.flagContainer}>
 												{partner.partnerIsActive === false ? (
 													<span className={classes.flagContent}>
@@ -186,10 +178,10 @@ class Partners extends Component {
 													</span>
 												)}
 											</div>
-										</TableCell> */}
-										{/* <TableCell align="left" className={classes.tableMobile}>
+										</TableCell>
+										<TableCell align="left" className={classes.tableMobile}>
 											{partner.sso}
-										</TableCell> */}
+										</TableCell>
 										<TableCell align="left">
 											<div className={classes.editActionMobile}>
 												{' '}

@@ -8,25 +8,27 @@ import { addNewPartner } from '../Partners/actions';
 class AddPartnerFormContainer extends Component {
 	submit = (values) => {
 		console.log(values);
-		const date = new Date();
 		const newPartner = {
-			id: date,
+			id: Date.now(),
 			pid: values.pid ? values.pid : null,
 			name: values.name ? values.name : null,
-			img: values.img ? values.img : null,
+			img: values.img
+				? values.img
+				: 'https://blog.matcharesident.com/wp-content/uploads/2019/07/iStock-944453634-750x450.jpg',
 			url: values.url ? values.url : null,
-			sso: values.sso ? values.sso : null,
-			partnerIsActive: values.partnerIsActive ? values.partnerIsActive : null,
-			sendWelcomeEmail: values.sendWelcomeEmail ? values.sendWelcomeEmail : null,
-			sendWelcomeEmailSSO: values.sendWelcomeEmailSSO ? values.sendWelcomeEmailSSO : null,
-			logWidgetView: values.logWidgetView ? values.logWidgetView : null,
-			hasJointAccounts: values.hasJointAccounts ? values.hasJointAccounts : null,
-			migrationViewEnabled: values.migrationViewEnabled ? values.migrationViewEnabled : null,
-			skipConfirmIdentity: values.skipConfirmIdentity ? values.skipConfirmIdentity : null,
-			skipAuth: values.skipAuth ? values.skipAuth : null,
-			ssoTrafficMonitoring: values.ssoTrafficMonitoring ? values.ssoTrafficMonitoring : null
+			sso: values.sso ? values.sso : false,
+			partnerIsActive: values.partnerIsActive ? values.partnerIsActive : false,
+			sendWelcomeEmail: values.sendWelcomeEmail ? values.sendWelcomeEmail : false,
+			sendWelcomeEmailSSO: values.sendWelcomeEmailSSO ? values.sendWelcomeEmailSSO : false,
+			logWidgetView: values.logWidgetView ? values.logWidgetView : false,
+			hasJointAccounts: values.hasJointAccounts ? values.hasJointAccounts : false,
+			migrationViewEnabled: values.migrationViewEnabled ? values.migrationViewEnabled : false,
+			skipConfirmIdentity: values.skipConfirmIdentity ? values.skipConfirmIdentity : false,
+			skipAuth: values.skipAuth ? values.skipAuth : false,
+			ssoTrafficMonitoring: values.ssoTrafficMonitoring ? values.ssoTrafficMonitoring : false
 		};
 		// const newPartner = {};
+		console.log(newPartner);
 		this.props.addNewPartner(newPartner);
 		this.props.history.push('/partners');
 	};
