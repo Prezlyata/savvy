@@ -1,22 +1,23 @@
 let initialState = {
-    userID: null,
-    email: null,
-    login: null,
-    isAuth: false
-}
+	login: null,
+	password: null,
+	// login: null,
+	// isAuth: false
+	auth: []
+};
 
 const authReducer = (state = initialState, action) => {
-    switch (action.type) {
-        case 'SET_USER_DATA':
-            return {
-                ...state,
-                ...action.payload,
-                isAuth: true
-            }
-        default:
-            return state
-    }
-}
+	console.log(action);
+	switch (action.type) {
+		case 'SET_USER':
+			return {
+				...state,
+				login: action.payload.login,
+				password: action.payload.password
+				// ...action.payload
+			};
+		default:
+			return state;
+	}
+};
 export default authReducer;
-
-
