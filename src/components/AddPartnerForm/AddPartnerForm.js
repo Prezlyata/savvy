@@ -122,7 +122,7 @@ const AddPartnerForm = ({ handleSubmit, pristine, reset, submitting, classes }) 
 export default compose(
 	reduxForm({
 		// a unique identifier for this form
-		form: 'AddPartnerForm1',
+		form: 'AddPartnerForm',
 		validate
 		// asyncValidate
 	}),

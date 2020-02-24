@@ -12,7 +12,7 @@
 
 export const validate = (values) => {
 	const errors = {};
-	const requiredFields = [ 'pid', 'name' ];
+	const requiredFields = [ 'pid', 'name', 'login', 'password' ];
 	requiredFields.forEach((field) => {
 		if (!values[field]) {
 			errors[field] = 'Required';

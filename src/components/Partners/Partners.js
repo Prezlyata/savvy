@@ -9,7 +9,6 @@ import { withStyles } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import styles from './styles';
 
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -27,6 +26,8 @@ import Tooltip from '@material-ui/core/Tooltip';
 
 import CheckIcon from '@material-ui/icons/Check';
 import RemoveIcon from '@material-ui/icons/Remove';
+import styles from './styles';
+
 
 class Partners extends Component {
 	constructor(props) {

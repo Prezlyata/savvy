@@ -20,6 +20,10 @@ Redux-form
 
 ### `npm install --save redux-form`
 
+Axios
+
+### `npm install axios`
+
 React-app-polyfill
 
 ### `npm i --save react-app-polyfill`
